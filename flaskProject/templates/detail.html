@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>细致规划</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; /* 设置一个浅灰色背景 */
+            padding: 50px 0;
+            margin: 0;
+            text-align: center;
+        }
+         h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            display: flex; /* 使用 Flexbox 布局 */
+            justify-content: center; /* 水平居中 */
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            margin: 0 10px; /* 图片之间的间距 */
+            max-width: 40%; /* 图片最大宽度为容器的 40% */
+            border-radius: 8px; /* 图片圆角 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+        }
+        form {
+            margin: 0 auto;
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>旅游范围: <span class="score">{{ text }}</span></h1>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='景点分布图.jpg') }}" alt="景点分布图">
+        <img src="{{ url_for('static', filename='价格分布图.jpg') }}" alt="价格分布图">
+    </div>
+    <form action="/predict" method="post">
+        <textarea name="time_limit" placeholder="请输入时间"></textarea>
+        <textarea name="budget_limit" placeholder="请输入预算"></textarea>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

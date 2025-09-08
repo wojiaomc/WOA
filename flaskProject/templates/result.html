@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>路线结果</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+        .result {
+            margin-bottom: 20px;
+        }
+        .score {
+            color: #007bff;
+            font-weight: bold;
+        }
+        .again {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .again:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+        <h2>搜索结果</h2>
+        <div class="result">
+            <h3>最佳路线: <span class="score">{{ best_route_site }}</span></h3>
+            <h3>预计时间: <span class="score">{{ total_time }}</span></h3>
+            <h3>预计花费: <span class="score">{{ total_cost }}</span></h3>
+        </div>
+        <a class="again" href="/">再来一次</a>
+    </div>
+</body>
+</html>

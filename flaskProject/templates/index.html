@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅游规划</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            'background-image: url(' ');'
+            background-size: cover;
+            background-position: center;
+            padding: 50px 0;
+            margin: 0;
+            text-align: center;
+        }
+         h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            margin: 0 auto;
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>旅游规划</h1>
+    <h2>请选择旅游的地区</h2>
+    <form action="/detail" method="post">
+        <textarea name="text" placeholder="请输入要去的地点"></textarea>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
